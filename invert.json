@@ -1,0 +1,42 @@
+{
+    "name" : "invert",
+    "parts" :
+    [
+        {
+            "name" : "INPUT",
+            "inputs" : [],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "nand",
+            "inputs" : ["a", "b"],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "OUTPUT",
+            "inputs" : ["DEF"],
+            "outputs" : []
+        }
+    ],
+    "wires" :
+    [
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "DEF",
+            "part_e" : "nand",
+            "IO_e" : "a"
+        },
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "DEF",
+            "part_e" : "nand",
+            "IO_e" : "b"
+        },
+        {
+            "part_s" : "nand",
+            "IO_s" : "DEF",
+            "part_e" : "OUTPUT",
+            "IO_e" : "DEF"
+        }
+    ]
+}
