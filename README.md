@@ -4,7 +4,7 @@ my Nandgame solutions
 ## File formatting
 All solutions are in separate JSON files with the following structures
 
-# Structures
+### Structures
 
 file:
 {
@@ -36,8 +36,8 @@ File name is always identical to the name of the part, e.g. nand.json - {"name" 
         "IO_e" : name_of_ending_IO
     }
 
-# Special parts
+### Special parts
 There are 2 special parts in every file: INPUT, OUTPUT representing the input and output variables.
 
 ## Custom parts
-Custom parts' names are of the format \<name\>.
+Custom parts' names are of the format "\<name\>".
