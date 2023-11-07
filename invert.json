@@ -5,16 +5,16 @@
         {
             "name" : "INPUT",
             "inputs" : [],
-            "outputs" : ["DEF"]
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "nand",
             "inputs" : ["a", "b"],
-            "outputs" : ["DEF"]
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "OUTPUT",
-            "inputs" : ["DEF"],
+            "inputs" : ["DEF_I"],
             "outputs" : []
         }
     ],
@@ -22,21 +22,21 @@
     [
         {
             "part_s" : "INPUT",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "nand",
             "IO_e" : "a"
         },
         {
             "part_s" : "INPUT",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "nand",
             "IO_e" : "b"
         },
         {
             "part_s" : "nand",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "OUTPUT",
-            "IO_e" : "DEF"
+            "IO_e" : "DEF_I"
         }
     ]
 }

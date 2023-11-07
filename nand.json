@@ -10,16 +10,16 @@
         {
             "name" : "relay_off",
             "inputs" : ["c", "in"],
-            "outputs" : ["DEF"]
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "relay_on",
             "inputs" : ["c", "in"],
-            "outputs" : ["DEF"]
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "OUTPUT",
-            "inputs" : ["DEF"],
+            "inputs" : ["DEF_I"],
             "outputs" : []
         }
     ],
@@ -45,15 +45,15 @@
         },
         {
             "part_s" : "relay_off",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "relay_on",
             "IO_e" : "c"
         },
         {
             "part_s" : "relay_on",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "OUTPUT",
-            "IO_e" : "DEF"
+            "IO_e" : "DEF_I"
         }
     ]
 }

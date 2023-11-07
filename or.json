@@ -9,22 +9,22 @@
         },
         {
             "name" : "inv_1",
-            "inputs" : ["DEF"],
-            "outputs" : ["DEF"]
+            "inputs" : ["DEF_I"],
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "inv_2",
-            "inputs" : ["DEF"],
-            "outputs" : ["DEF"]
+            "inputs" : ["DEF_I"],
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "nand",
             "inputs" : ["a", "b"],
-            "outputs" : ["DEF"]
+            "outputs" : ["DEF_O"]
         },
         {
             "name" : "OUTPUT",
-            "inputs" : ["DEF"],
+            "inputs" : ["DEF_I"],
             "outputs" : []
         }
     ],
@@ -34,31 +34,31 @@
             "part_s" : "INPUT",
             "IO_s" : "a",
             "part_e" : "inv_1",
-            "IO_e" : "DEF"
+            "IO_e" : "DEF_I"
         },
         {
             "part_s" : "INPUT",
             "IO_s" : "b",
             "part_e" : "inv_2",
-            "IO_e" : "DEF"
+            "IO_e" : "DEF_I"
         },
         {
             "part_s" : "inv_1",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "nand",
             "IO_e" : "a"
         },
         {
             "part_s" : "inv_2",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "nand",
             "IO_e" : "b"
         },
         {
             "part_s" : "nand",
-            "IO_s" : "DEF",
+            "IO_s" : "DEF_O",
             "part_e" : "OUTPUT",
-            "IO_e" : "DEF"
+            "IO_e" : "DEF_I"
         }
     ]
 }
