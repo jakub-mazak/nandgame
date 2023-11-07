@@ -1,0 +1,64 @@
+{
+    "name" : "or",
+    "parts" :
+    [
+        {
+            "name" : "INPUT",
+            "inputs" : [],
+            "outputs" : ["a", "b"]
+        },
+        {
+            "name" : "inv_1",
+            "inputs" : ["DEF"],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "inv_2",
+            "inputs" : ["DEF"],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "nand",
+            "inputs" : ["a", "b"],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "OUTPUT",
+            "inputs" : ["DEF"],
+            "outputs" : []
+        }
+    ],
+    "wires" :
+    [
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "a",
+            "part_e" : "inv_1",
+            "IO_e" : "DEF"
+        },
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "b",
+            "part_e" : "inv_2",
+            "IO_e" : "DEF"
+        },
+        {
+            "part_s" : "inv_1",
+            "IO_s" : "DEF",
+            "part_e" : "nand",
+            "IO_e" : "a"
+        },
+        {
+            "part_s" : "inv_2",
+            "IO_s" : "DEF",
+            "part_e" : "nand",
+            "IO_e" : "b"
+        },
+        {
+            "part_s" : "nand",
+            "IO_s" : "DEF",
+            "part_e" : "OUTPUT",
+            "IO_e" : "DEF"
+        }
+    ]
+}
