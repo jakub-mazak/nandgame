@@ -39,5 +39,8 @@ File name is always identical to the name of the part, e.g. nand.json - {"name" 
 ### Special parts
 There are 2 special parts in every file: INPUT, OUTPUT representing the input and output variables.
 
+### Parts with one output
+The output is named "DEF".
+
 ## Custom parts
 Custom parts' names are of the format "\<name\>".
