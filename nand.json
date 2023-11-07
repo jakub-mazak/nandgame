@@ -1,0 +1,59 @@
+{
+    "name" : "nand",
+    "parts" :
+    [
+        {
+            "name" : "INPUT",
+            "inputs" : [],
+            "outputs" : ["a", "b", "power"]
+        },
+        {
+            "name" : "relay_off",
+            "inputs" : ["c", "in"],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "relay_on",
+            "inputs" : ["c", "in"],
+            "outputs" : ["DEF"]
+        },
+        {
+            "name" : "OUTPUT",
+            "inputs" : ["DEF"],
+            "outputs" : []
+        }
+    ],
+    "wires" :
+    [
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "a",
+            "part_e" : "relay_off",
+            "IO_e" : "c"
+        },
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "b",
+            "part_e" : "relay_off",
+            "IO_e" : "in"
+        },
+        {
+            "part_s" : "INPUT",
+            "IO_s" : "V",
+            "part_e" : "relay_on",
+            "IO_e" : "in"
+        },
+        {
+            "part_s" : "relay_off",
+            "IO_s" : "DEF",
+            "part_e" : "relay_on",
+            "IO_e" : "c"
+        },
+        {
+            "part_s" : "relay_on",
+            "IO_s" : "DEF",
+            "part_e" : "OUTPUT",
+            "IO_e" : "DEF"
+        }
+    ]
+}
